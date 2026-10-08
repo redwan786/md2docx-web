@@ -10,7 +10,7 @@ from waitress import serve
 BASE = os.path.dirname(os.path.abspath(__file__))
 LUA_FILTER = os.path.join(BASE, "latex-math.lua")
 REFERENCE_DOC = os.path.join(BASE, "reference.docx")
-MAX_MB = 2  # biggest upload allowed
+MAX_MB = 50  # biggest upload allowed
 
 app = Flask(__name__)
 app.config["MAX_CONTENT_LENGTH"] = MAX_MB * 1024 * 1024
